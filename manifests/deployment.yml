@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kirankdasazuremenuitemlisting 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kirankdasazuremenuitemlisting
+  template:
+    metadata:
+      labels:
+        app: kirankdasazuremenuitemlisting 
+    spec:
+      containers:
+        - name: kirankdasazuremenuitemlisting 
+          image: dnazureacrcase1.azurecr.io/kirankdasazuremenuitemlisting
+          ports:
+          - containerPort: 80
